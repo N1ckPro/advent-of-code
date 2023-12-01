@@ -23,6 +23,9 @@ jobs:
           cache-dependency-path: yarn.lock
           node-version: 18.18.2
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Install dependencies
         run: yarn --immutable
 
