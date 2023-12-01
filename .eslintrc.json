@@ -1,0 +1,15 @@
+{
+	"extends": ["neon/common", "neon/no-deprecated", "neon/node", "neon/typescript", "neon/prettier"],
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
+	"overrides": [
+		{
+			"files": ["*.ts"],
+			"parser": "@typescript-eslint/parser"
+		}
+	],
+	"env": {
+		"jest": true
+	}
+}
