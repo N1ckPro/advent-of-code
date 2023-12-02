@@ -1,5 +1,5 @@
-import type { Solution } from '@lib';
-import { benchmark, readInput } from '@lib';
+import type { Solution } from '../../../lib/index.js';
+import { benchmark, readInput } from '../../../lib/index.js';
 import { getNumber } from './getNumber1.js';
 
 const solution: Solution<number> = (input: string[]) => {

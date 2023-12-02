@@ -1,7 +1,6 @@
 {
 	"compilerOptions": {
 		"allowImportingTsExtensions": true,
-		"baseUrl": ".",
 		"esModuleInterop": true,
 		"isolatedModules": true,
 		"lib": ["ESNext"],
@@ -9,9 +8,6 @@
 		"moduleResolution": "NodeNext",
 		"noEmit": true,
 		"outDir": "dist",
-		"paths": {
-			"@lib": ["src/lib/index.ts"]
-		},
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
