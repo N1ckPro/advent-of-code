@@ -1,10 +1,10 @@
-import type { Solution } from '../../../lib/index.js';
-import { benchmark, readInput } from '../../../lib/index.js';
+import { benchmark, readInput } from '@lib';
+import type { Solution } from '@lib'
 import { getNumber } from './getNumber1.js';
 
-const solution: Solution<string, number> = (input: string) => {
+const solution: Solution<number> = (input: string[]) => {
 	let result = 0;
-	for (const line of input.split(/\n/g)) {
+	for (const line of input) {
 		result += getNumber(line) ?? 0;
 	}
 

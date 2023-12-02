@@ -1,8 +1,8 @@
 import { performance, PerformanceObserver } from 'node:perf_hooks';
 
-export type Solution<Input, Result> = (resource: Input) => Promise<Result> | Result;
+export type Solution<Result> = (resource: string[]) => Promise<Result> | Result;
 
-export const benchmark = async <Input, Result>(resource: Input, solution: Solution<Input, Result>) => {
+export const benchmark = async <Result>(resource: string[], solution: Solution<Result>) => {
 	const observer = new PerformanceObserver((list) => {
 		for (const entry of list.getEntries()) {
 			console.log(`${entry.name}: ${entry.duration.toFixed(2)} ms`);
