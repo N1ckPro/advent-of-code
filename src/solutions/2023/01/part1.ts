@@ -1,8 +1,7 @@
-import type { Solution } from '../../../lib/index.js';
-import { benchmark, readInput } from '../../../lib/index.js';
+import { benchmark, type Solution } from '../../../lib/index.js';
 import { getNumber } from './getNumber1.js';
 
-const solution: Solution<number> = (input: string[]) => {
+export const solution: Solution<number> = (input: string[]) => {
 	let result = 0;
 	for (const line of input) {
 		result += getNumber(line) ?? 0;
@@ -11,4 +10,4 @@ const solution: Solution<number> = (input: string[]) => {
 	return result;
 };
 
-console.log(`Part 1 Result: ${await benchmark(await readInput(1), solution)}`);
+await benchmark(1, 1, solution);

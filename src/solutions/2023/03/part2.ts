@@ -1,6 +1,6 @@
 import type { Solution } from '../../../lib/index.js';
-import { benchmark, readInput } from '../../../lib/index.js';
+import { benchmark } from '../../../lib/index.js';
 import { getGearRations } from './getGearRatios.js';
 
-const solution: Solution<number> = (input: string[]) => getGearRations(input);
-console.log(`Part 2 Result: ${await benchmark(await readInput(3), solution)}`);
+export const solution: Solution<number> = (input: string[]) => getGearRations(input);
+await benchmark(3, 2, solution);

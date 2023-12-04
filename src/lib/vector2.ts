@@ -24,7 +24,7 @@ export class Vector2 implements Vector2Like {
 			for (let y = this.y; y < this.y + this.sizyY; y++) {
 				const dx = Math.abs(x - vector.x);
 				const dy = Math.abs(y - vector.y);
-				if (dx <= 1 && dy <= 1) return true;
+				if (dx <= vector.sizeX && dy <= vector.sizyY) return true;
 			}
 		}
 

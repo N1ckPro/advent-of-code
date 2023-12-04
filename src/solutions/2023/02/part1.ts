@@ -1,8 +1,8 @@
 import type { Solution } from '../../../lib/index.js';
-import { benchmark, readInput } from '../../../lib/index.js';
+import { benchmark } from '../../../lib/index.js';
 import { checkSets } from './checkSets.js';
 
-const solution: Solution<number> = (input: string[]) => {
+export const solution: Solution<number> = (input: string[]) => {
 	let result = 0;
 	for (const line of input) {
 		const sets = line.replace(/Game \d{1,3}: /, '').split('; ');
@@ -12,4 +12,4 @@ const solution: Solution<number> = (input: string[]) => {
 	return result;
 };
 
-console.log(`Part 1 Result: ${await benchmark(await readInput(2), solution)}`);
+await benchmark(2, 1, solution);
