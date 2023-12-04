@@ -1,6 +1,6 @@
 import type { Solution } from '../../../lib/index.js';
 import { benchmark } from '../../../lib/index.js';
-import { getGearRations } from './getGearRatios.js';
+import { getGearRatios } from './getGearRatios.js';
 
-export const solution: Solution<number> = (input: string[]) => getGearRations(input);
+export const solution: Solution<number> = (input: string[]) => getGearRatios(input);
 await benchmark(3, 2, solution);

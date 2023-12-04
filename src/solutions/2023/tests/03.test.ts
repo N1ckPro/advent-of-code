@@ -1,5 +1,5 @@
 import { readInput } from '../../../lib/input.ts';
-import { getGearRations } from '../03/getGearRatios.ts';
+import { getGearRatios } from '../03/getGearRatios.ts';
 import { getPartNumbers } from '../03/getPartNumbers.ts';
 import { solution as solution1 } from '../03/part1.ts';
 import { solution as solution2 } from '../03/part2.ts';
@@ -27,7 +27,7 @@ describe('Numbers should be parsed and checked for adjacement correctly', () => 
 
 	// Part 2
 	test('Provided input should give 16345', () => {
-		expect(getGearRations(testsInput)).toBe(16_345);
+		expect(getGearRatios(testsInput)).toBe(16_345);
 	});
 	test('Part 2 should be solved successfully', async () => {
 		expect(solution2(input)).toBe(84_159_075);

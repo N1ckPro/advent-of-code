@@ -1,12 +1,11 @@
 import { Vector2 } from '../../../lib/vector2.js';
 import { PartNumber } from './shared.js';
 
-export const getGearRations = (input: string[]) => {
-	let result = 0;
-
+export const getGearRatios = (input: string[]) => {
 	const possibleGears: Vector2[] = [];
 	const numbers: PartNumber[] = [];
 	let number = '';
+	let result = 0;
 
 	for (const [y, line] of input.entries()) {
 		for (let x = 0; x < line.length; x++) {
