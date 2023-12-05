@@ -1,2 +1,5 @@
 .yarn/*
 node_modules/*
+
+# Remove once these solutions actually work
+src/solutions/2023/05/part2.ts
