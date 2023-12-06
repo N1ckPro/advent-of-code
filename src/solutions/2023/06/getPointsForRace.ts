@@ -1,11 +1,5 @@
-export const getPointsForRace = (input: string[]) => {
-	const [time, distance] = input.map((line) => Number(line.slice(line.indexOf(':') + 1).replaceAll(/ +/g, '')));
-
-	let result = 0;
-	for (let i = 0; i < time; i++) {
-		const distanceTravelled = -((i - time / 2) ** 2) + (time / 2) ** 2;
-		if (distanceTravelled > distance) result++;
-	}
-
-	return result;
+export const getPointsForRace = (time: number, distance: number) => {
+	const first = time / 2 - Math.sqrt((time / 2) ** 2 - distance);
+	const second = time / 2 + Math.sqrt((time / 2) ** 2 - distance);
+	return (second % 1 === 0 ? second - 1 : Math.floor(second)) - Math.floor(first);
 };

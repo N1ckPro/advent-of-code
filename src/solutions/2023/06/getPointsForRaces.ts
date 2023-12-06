@@ -1,5 +1,7 @@
+import { getPointsForRace } from './getPointsForRace.ts';
+
 export const getPointsForRaces = (input: string[]) => {
-	const [time, distance] = input.map((line) =>
+	const [times, distances] = input.map((line) =>
 		line
 			.slice(line.indexOf(':') + 1)
 			.trimStart()
@@ -8,15 +10,8 @@ export const getPointsForRaces = (input: string[]) => {
 	);
 
 	let result = 1;
-	for (const [i, element] of time.entries()) {
-		let success = 0;
-
-		for (let j = 0; j < element; j++) {
-			const distanceTravelled = -((j - element / 2) ** 2) + (element / 2) ** 2;
-			if (distanceTravelled > distance[i]) success++;
-		}
-
-		result *= success;
+	for (const [i, time] of times.entries()) {
+		result *= getPointsForRace(time, distances[i]);
 	}
 
 	return result;

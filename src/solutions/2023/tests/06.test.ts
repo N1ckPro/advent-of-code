@@ -19,7 +19,7 @@ describe('Races should be parsed correctly', () => {
 
 	// Part 2
 	test('One single race should be parsed correctly', () => {
-		expect(getPointsForRace(testsInput)).toBe(71_503);
+		expect(getPointsForRace(71_530, 940_200)).toBe(71_503);
 	});
 	test('Part 2 should be solved successfully', async () => {
 		expect(solution2(input)).toBe(30_125_202);
