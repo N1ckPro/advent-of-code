@@ -12,6 +12,7 @@
 		"day7": "ts-node src/solutions/2023/07/part1.ts && ts-node src/solutions/2023/07/part2.ts",
 		"day8": "ts-node src/solutions/2023/08/part1.ts && ts-node src/solutions/2023/08/part2.ts",
 		"day9": "ts-node src/solutions/2023/09/part1.ts && ts-node src/solutions/2023/09/part2.ts",
+		"day10": "ts-node src/solutions/2023/10/part1.ts",
 		"format": "prettier --write src && eslint src --fix --format=pretty",
 		"lint": "prettier --check src && eslint src --format=pretty",
 		"prepare": "husky install",

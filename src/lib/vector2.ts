@@ -19,6 +19,13 @@ export class Vector2 implements Vector2Like {
 		this.sizyY = sizeY;
 	}
 
+	public addMotion(motion: Vector2Like): this {
+		this.x += motion.x;
+		this.y += motion.y;
+
+		return this;
+	}
+
 	public isAdjacent(vector: Vector2) {
 		for (let x = this.x; x < this.x + this.sizeX; x++) {
 			for (let y = this.y; y < this.y + this.sizyY; y++) {
