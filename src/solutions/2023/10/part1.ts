@@ -44,8 +44,8 @@ export const solution: Solution<number> = (input: string[]) => {
 
 	let i = 1;
 	while (nextPosition.x !== position.x || nextPosition.y !== position.y) {
-		// eslint-disable-next-line @typescript-eslint/no-loop-func
 		const nextDirection = PipeDirections[sketch[nextPosition.y][nextPosition.x] as keyof typeof PipeDirections].find(
+			// eslint-disable-next-line @typescript-eslint/no-loop-func
 			(v) => OppositeDirections[v] !== previousDirection,
 		)!;
 		nextPosition.addMotion(Direction.fromMarker(nextDirection));
