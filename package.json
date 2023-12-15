@@ -3,21 +3,10 @@
 	"packageManager": "yarn@4.0.2",
 	"type": "module",
 	"scripts": {
-		"day1": "ts-node src/solutions/2023/01/part1.ts && ts-node src/solutions/2023/01/part2.ts",
-		"day2": "ts-node src/solutions/2023/02/part1.ts && ts-node src/solutions/2023/02/part2.ts",
-		"day3": "ts-node src/solutions/2023/03/part1.ts && ts-node src/solutions/2023/03/part2.ts",
-		"day4": "ts-node src/solutions/2023/04/part1.ts && ts-node src/solutions/2023/04/part2.ts",
-		"day5": "ts-node src/solutions/2023/05/part1.ts",
-		"day6": "ts-node src/solutions/2023/06/part1.ts && ts-node src/solutions/2023/06/part2.ts",
-		"day7": "ts-node src/solutions/2023/07/part1.ts && ts-node src/solutions/2023/07/part2.ts",
-		"day8": "ts-node src/solutions/2023/08/part1.ts && ts-node src/solutions/2023/08/part2.ts",
-		"day9": "ts-node src/solutions/2023/09/part1.ts && ts-node src/solutions/2023/09/part2.ts",
-		"day10": "ts-node src/solutions/2023/10/part1.ts",
-		"day11": "ts-node src/solutions/2023/11/part1.ts && ts-node src/solutions/2023/11/part2.ts",
-		"day15": "ts-node src/solutions/2023/15/part1.ts && ts-node src/solutions/2023/15/part2.ts",
 		"format": "prettier --write src && eslint src --fix --format=pretty",
 		"lint": "prettier --check src && eslint src --format=pretty",
 		"prepare": "husky install",
+		"solution": "node scripts/run.js",
 		"test": "node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js"
 	},
 	"devDependencies": {
@@ -33,5 +22,8 @@
 		"ts-jest": "^29.1.1",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"commander": "^11.1.0"
 	}
 }

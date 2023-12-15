@@ -3,9 +3,7 @@ import { benchmark } from '../../../lib/index.js';
 import { hash } from './hash.js';
 
 export const solution: Solution<number> = (input: string[]) => {
-	const boxes = Array.from({ length: 256 })
-		.fill(null)
-		.map(() => new Map<string, number>());
+	const boxes = Array.from({ length: 256 }).map(() => new Map<string, number>());
 
 	for (const sequence of input[0].split(',')) {
 		const matches = /(?<label>[a-z]+)(?<type>[=-])(?<lens>\d)?/.exec(sequence)!;
