@@ -30,7 +30,7 @@ class Beam extends Direction {
 
 export const getEnergizedTiles = (input: string[], x: number, y: number, direction: DirectionMarker) => {
 	const beams = new Set<Beam>().add(new Beam(direction, x, y));
-	const energizedTiles = new Map<string, string[]>();
+	const energizedTiles = new Map<string, DirectionMarker[]>();
 
 	while (beams.size > 0) {
 		for (const beam of beams) {
@@ -46,7 +46,7 @@ export const getEnergizedTiles = (input: string[], x: number, y: number, directi
 				continue;
 			}
 
-			if (!energizedTiles.has(beam.toString()) + beam.direction) {
+			if (!energizedTiles.has(beam.toString()) + beam.direction.toString()) {
 				const directions = energizedTiles.get(beam.toString()) ?? [];
 				energizedTiles.set(beam.toString(), [...directions, beam.direction]);
 			}

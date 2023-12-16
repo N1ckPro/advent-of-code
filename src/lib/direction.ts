@@ -1,10 +1,10 @@
 import { Vector2 } from './vector2.js';
 
 export enum DirectionMarker {
-	East = 'E',
-	North = 'N',
-	South = 'S',
-	West = 'W',
+	East,
+	North,
+	South,
+	West,
 }
 
 export class Direction extends Vector2 {

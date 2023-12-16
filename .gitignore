@@ -4,3 +4,4 @@ node_modules/*
 # Remove once these solutions actually work
 src/solutions/2023/05/part2.ts
 src/solutions/2023/10/part2.ts
+src/solutions/2023/14/part2.ts
