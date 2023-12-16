@@ -37,4 +37,8 @@ export class Vector2 implements Vector2Like {
 
 		return false;
 	}
+
+	public toString() {
+		return `${this.x},${this.y}` as const;
+	}
 }

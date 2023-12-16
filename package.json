@@ -6,7 +6,7 @@
 		"format": "prettier --write src && eslint src --fix --format=pretty",
 		"lint": "prettier --check src && eslint src --format=pretty",
 		"prepare": "husky install",
-		"solution": "node scripts/run.js",
+		"solution": "node --loader ts-node/esm scripts/run.js",
 		"test": "node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js"
 	},
 	"devDependencies": {
