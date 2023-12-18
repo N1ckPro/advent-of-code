@@ -7,6 +7,13 @@ export enum DirectionMarker {
 	West,
 }
 
+export enum DirectionLetterMarker {
+	Down = 'D',
+	Left = 'L',
+	Right = 'R',
+	Up = 'U',
+}
+
 export class Direction extends Vector2 {
 	public static readonly EAST = Object.freeze(new Direction(1, 0));
 
@@ -20,6 +27,11 @@ export class Direction extends Vector2 {
 		// eslint-disable-next-line @typescript-eslint/no-use-before-define
 		return DirectionMap[direction];
 	}
+
+	public static fromLetterMarker(direction: DirectionLetterMarker) {
+		// eslint-disable-next-line @typescript-eslint/no-use-before-define
+		return DirectionLetterMap[direction];
+	}
 }
 
 export const DirectionMap = {
@@ -27,4 +39,11 @@ export const DirectionMap = {
 	[DirectionMarker.North]: Direction.NORTH,
 	[DirectionMarker.South]: Direction.SOUTH,
 	[DirectionMarker.West]: Direction.WEST,
+};
+
+export const DirectionLetterMap = {
+	[DirectionLetterMarker.Right]: Direction.EAST,
+	[DirectionLetterMarker.Up]: Direction.NORTH,
+	[DirectionLetterMarker.Down]: Direction.SOUTH,
+	[DirectionLetterMarker.Left]: Direction.WEST,
 };
