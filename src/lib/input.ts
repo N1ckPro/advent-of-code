@@ -1,13 +1,9 @@
 import { readFile } from 'node:fs/promises';
-import { EOL } from 'node:os';
 import { join } from 'node:path';
 
 export const readInput = async (day: number, filterEmpty = true) => {
-	const input = await readFile(
-		join('src', 'solutions', '2023', day >= 10 ? day.toString() : `0${day}`, 'input.txt'),
-		'utf8',
-	);
+	const input = await readFile(join('inputs', '2023', `${day >= 10 ? day.toString() : `0${day}`}.txt`), 'utf8');
 
-	if (filterEmpty) return input.split(EOL).filter((line) => line !== '');
-	else return input.split(EOL);
+	if (filterEmpty) return input.split('\n').filter((line) => line !== '');
+	else return input.split('\n');
 };
