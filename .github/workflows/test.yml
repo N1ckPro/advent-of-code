@@ -14,6 +14,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Checkout submodule
+        uses: actions/checkout@v4
+        with:
+          repository: N1ckPro/aoc-inputs
+          path: inputs
+          ref: main
+          ssh-key: ${{ secrets.INPUTS_ACCESS_KEY }}
+          persist-credentials: false
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         env:
