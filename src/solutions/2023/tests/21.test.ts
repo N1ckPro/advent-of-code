@@ -2,7 +2,7 @@ import { readInput } from '../../../lib/input.ts';
 import { solution as solution1 } from '../21/part1.ts';
 import { solution as solution2 } from '../21/part2.ts';
 
-const input = await readInput(21);
+const input = await readInput(21, '2023');
 
 describe('Steps should be counted correctly', () => {
 	test('Part 1 should be solved successfully', async () => {

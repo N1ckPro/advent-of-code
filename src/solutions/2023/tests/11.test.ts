@@ -2,7 +2,7 @@ import { readInput } from '../../../lib/input.ts';
 import { solution as solution1 } from '../11/part1.ts';
 import { solution as solution2 } from '../11/part2.ts';
 
-const input = await readInput(11);
+const input = await readInput(11, '2023');
 
 describe('Cosmic expansion map should be parsed successfully', () => {
 	test('Part 1 should be solved successfully', async () => {

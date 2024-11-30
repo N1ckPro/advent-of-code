@@ -33,4 +33,4 @@ export const solution: Solution<number> = (input: string[]) => {
 	return interior + circumference;
 };
 
-await benchmark(18, 2, solution);
+await benchmark(2_023, 18, 2, solution);

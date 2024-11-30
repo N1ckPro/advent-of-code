@@ -6,4 +6,4 @@ export const solution: Solution<number> = (input: string[]) => {
 	return getPointsForRace(time, distance);
 };
 
-await benchmark(6, 2, solution);
+await benchmark(2_023, 6, 2, solution);

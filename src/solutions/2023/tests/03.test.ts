@@ -4,7 +4,7 @@ import { getPartNumbers } from '../03/getPartNumbers.ts';
 import { solution as solution1 } from '../03/part1.ts';
 import { solution as solution2 } from '../03/part2.ts';
 
-const input = await readInput(3);
+const input = await readInput(3, '2023');
 const testsInput = `467..114..
 ...*......
 ..35..633.

@@ -4,7 +4,7 @@ import { getMinCubes } from '../02/getMinCubes.ts';
 import { solution as solution1 } from '../02/part1.ts';
 import { solution as solution2 } from '../02/part2.ts';
 
-const input = await readInput(2);
+const input = await readInput(2, '2023');
 describe('Sets should be checked correctly', () => {
 	// Part 1
 	test('Sets should be correctly checked if they can be played with', () => {

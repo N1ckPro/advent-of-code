@@ -97,4 +97,4 @@ export const solution: Solution<number> = (input: string[]) => {
 	});
 };
 
-await benchmark(19, 2, solution, false);
+await benchmark(2_023, 19, 2, solution, false);

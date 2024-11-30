@@ -38,4 +38,4 @@ export const solution: Solution<number> = (input: string[]) => {
 	return totalHighPulses * totalLowPulses;
 };
 
-await benchmark(20, 1, solution);
+await benchmark(2_023, 20, 1, solution);

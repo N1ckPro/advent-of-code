@@ -7,4 +7,4 @@ export const solution: Solution<number> = (input: string[]) => {
 	return getHeatLoss(map, 4, 10);
 };
 
-await benchmark(17, 2, solution);
+await benchmark(2_023, 17, 2, solution);

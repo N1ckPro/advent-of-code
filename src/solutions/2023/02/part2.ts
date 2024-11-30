@@ -12,4 +12,4 @@ export const solution: Solution<number> = (input: string[]) => {
 	return result;
 };
 
-await benchmark(2, 2, solution);
+await benchmark(2_023, 2, 2, solution);

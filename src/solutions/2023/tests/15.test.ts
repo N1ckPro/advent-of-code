@@ -2,7 +2,7 @@ import { readInput } from '../../../lib/input.ts';
 import { solution as solution1 } from '../15/part1.ts';
 import { solution as solution2 } from '../15/part2.ts';
 
-const input = await readInput(15);
+const input = await readInput(15, '2023');
 
 describe('Lens algorithms should be done correctly', () => {
 	test('Part 1 should be solved successfully', async () => {

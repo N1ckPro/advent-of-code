@@ -3,13 +3,9 @@ import { Direction, Vector2, benchmark } from '../../../lib/index.js';
 
 const directions = [Direction.EAST, Direction.NORTH, Direction.SOUTH, Direction.WEST];
 
-const getX = (xLength: number, x: number) => {
-	return x >= 0 ? x % xLength : (xLength + (x % xLength)) % xLength;
-};
+const getX = (xLength: number, x: number) => (x >= 0 ? x % xLength : (xLength + (x % xLength)) % xLength);
 
-const getY = (yLength: number, y: number) => {
-	return y >= 0 ? y % yLength : (yLength + (y % yLength)) % yLength;
-};
+const getY = (yLength: number, y: number) => (y >= 0 ? y % yLength : (yLength + (y % yLength)) % yLength);
 
 const calculateSteps = (input: string[], start: Vector2, steps: number): number => {
 	const checked = new Set<string>();
@@ -48,4 +44,4 @@ export const solution: Solution<number> = (input: string[]) => {
 	return a * n ** 2 + b * n + c;
 };
 
-await benchmark(21, 2, solution);
+await benchmark(2_023, 21, 2, solution);

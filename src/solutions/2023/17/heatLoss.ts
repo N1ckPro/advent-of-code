@@ -25,9 +25,8 @@ class Crucible extends Vector2 {
 	}
 }
 
-const cacheKey = (x: number, y: number, direction: DirectionMarker, forwardCounter: number) => {
-	return `${x}.${y}.${direction}.${forwardCounter}`;
-};
+const cacheKey = (x: number, y: number, direction: DirectionMarker, forwardCounter: number) =>
+	`${x}.${y}.${direction}.${forwardCounter}`;
 
 export const getHeatLoss = (map: number[][], minForwardSteps: number, maxForwardSteps: number) => {
 	const toVisit: Crucible[] = [
