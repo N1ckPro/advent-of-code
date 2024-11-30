@@ -24,4 +24,4 @@ export const solution: Solution<number> = (input: string[]) => {
 	return highest;
 };
 
-await benchmark(16, 2, solution);
+await benchmark(2_023, 16, 2, solution);

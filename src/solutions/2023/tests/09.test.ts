@@ -2,7 +2,7 @@ import { readInput } from '../../../lib/input.ts';
 import { solution as solution1 } from '../09/part1.ts';
 import { solution as solution2 } from '../09/part2.ts';
 
-const input = await readInput(9);
+const input = await readInput(9, '2023');
 
 describe('Card games should be parsed successfully', () => {
 	test('Part 1 should be solved successfully', async () => {

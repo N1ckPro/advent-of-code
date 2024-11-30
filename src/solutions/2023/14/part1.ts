@@ -23,9 +23,7 @@ export const solution: Solution<number> = (input: string[]) => {
 		rock.addMotion(new Vector2(0, -distance));
 	}
 
-	return roundedRocks.reduce((sum, rock) => {
-		return sum + (input.length - rock.y);
-	}, 0);
+	return roundedRocks.reduce((sum, rock) => sum + (input.length - rock.y), 0);
 };
 
-await benchmark(14, 1, solution);
+await benchmark(2_023, 14, 1, solution);

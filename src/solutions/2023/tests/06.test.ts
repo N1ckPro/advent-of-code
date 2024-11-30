@@ -4,7 +4,7 @@ import { getPointsForRaces } from '../06/getPointsForRaces.ts';
 import { solution as solution1 } from '../06/part1.ts';
 import { solution as solution2 } from '../06/part2.ts';
 
-const input = await readInput(6);
+const input = await readInput(6, '2023');
 const testsInput = `Time:      7  15   30
 Distance:  9  40  200`.split(/\n/g);
 

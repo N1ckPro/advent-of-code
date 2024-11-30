@@ -33,13 +33,9 @@ export const solution: Solution<number> = (input: string[]) => {
 		return [game[0], game[1], getHandType(sortedChars)] as const;
 	});
 
-	const sortedGames = parsedGames.sort((a, b) => {
-		return b[2] > a[2] ? -1 : b[2] < a[2] ? 1 : compareGames(a[0], b[0]);
-	});
+	const sortedGames = parsedGames.sort((a, b) => (b[2] > a[2] ? -1 : b[2] < a[2] ? 1 : compareGames(a[0], b[0])));
 
-	return sortedGames.reduce((sum, curr, index) => {
-		return sum + curr[1] * (index + 1);
-	}, 0);
+	return sortedGames.reduce((sum, curr, index) => sum + curr[1] * (index + 1), 0);
 };
 
-await benchmark(7, 1, solution);
+await benchmark(2_023, 7, 1, solution);

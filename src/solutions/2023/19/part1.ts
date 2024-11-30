@@ -55,9 +55,10 @@ export const solution: Solution<number> = (input: string[]) => {
 		return new Part(Number(a.slice(2)), Number(m.slice(2)), Number(s.slice(2)), Number(x.slice(2)));
 	});
 
-	return parts.reduce((sum, part) => {
-		return testPart(workflows, part, 'in') ? sum + part.a + part.m + part.s + part.x : sum;
-	}, 0);
+	return parts.reduce(
+		(sum, part) => (testPart(workflows, part, 'in') ? sum + part.a + part.m + part.s + part.x : sum),
+		0,
+	);
 };
 
-await benchmark(19, 1, solution, false);
+await benchmark(2_023, 19, 1, solution, false);

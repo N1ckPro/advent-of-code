@@ -4,7 +4,7 @@ import { getNumber as getNumber2 } from '../01/getNumber2.ts';
 import { solution as solution1 } from '../01/part1.ts';
 import { solution as solution2 } from '../01/part2.ts';
 
-const input = await readInput(1);
+const input = await readInput(1, '2023');
 describe('Numbers should be found correctly in strings', () => {
 	// Part 1
 	test('Only numbers should be parsed from strings', () => {

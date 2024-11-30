@@ -1,7 +1,7 @@
 import { readInput } from '../../../lib/input.ts';
 import { solution as solution1 } from '../08/part1.ts';
 
-const input = await readInput(8);
+const input = await readInput(8, '2023');
 
 describe('Maps should be parsed successfully', () => {
 	test('Part 1 should be solved successfully', async () => {

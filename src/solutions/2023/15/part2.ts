@@ -32,4 +32,4 @@ export const solution: Solution<number> = (input: string[]) => {
 	}, 0);
 };
 
-await benchmark(15, 2, solution);
+await benchmark(2_023, 15, 2, solution);

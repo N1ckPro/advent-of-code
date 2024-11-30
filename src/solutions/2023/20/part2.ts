@@ -55,4 +55,4 @@ export const solution: Solution<number> = (input: string[]) => {
 	return result;
 };
 
-await benchmark(20, 2, solution);
+await benchmark(2_023, 20, 2, solution);

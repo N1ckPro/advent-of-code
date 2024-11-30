@@ -4,10 +4,16 @@ import { readInput } from './input.ts';
 
 export type Solution<Result> = (resource: string[]) => Promise<Result> | Result;
 
-export const benchmark = async <Result>(day: number, part: number, solution: Solution<Result>, filterEmpty = true) => {
+export const benchmark = async <Result>(
+	year: number,
+	day: number,
+	part: number,
+	solution: Solution<Result>,
+	filterEmpty = true,
+) => {
 	if (process.env.NODE_ENV === 'test') return;
 
-	const resource = await readInput(day, filterEmpty);
+	const resource = await readInput(day, year.toString(), filterEmpty);
 	const start = performance.now();
 	const result = await solution(resource);
 	const end = performance.now();

@@ -2,7 +2,7 @@ import { readInput } from '../../../lib/input.ts';
 import { solution as solution1 } from '../20/part1.ts';
 import { solution as solution2 } from '../20/part2.ts';
 
-const input = await readInput(20);
+const input = await readInput(20, '2023');
 
 describe('Modules should be parsed correctly', () => {
 	test('Part 1 should be solved successfully', async () => {

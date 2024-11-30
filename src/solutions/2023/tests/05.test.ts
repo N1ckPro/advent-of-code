@@ -2,7 +2,7 @@ import { readInput } from '../../../lib/input.ts';
 import { getLowestLocation } from '../05/getLowestLocation.ts';
 import { solution as solution1 } from '../05/part1.ts';
 
-const input = await readInput(5);
+const input = await readInput(5, '2023');
 const testsInput = `seeds: 79 14 55 13
 seed-to-soil map:
 50 98 2
