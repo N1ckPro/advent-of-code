@@ -19,7 +19,15 @@ export class Direction extends Vector2 {
 
 	public static readonly NORTH = Object.freeze(new Direction(0, -1));
 
+	public static readonly NORTH_EAST = Object.freeze(new Direction(1, -1));
+
+	public static readonly NORTH_WEST = Object.freeze(new Direction(-1, -1));
+
 	public static readonly SOUTH = Object.freeze(new Direction(0, 1));
+
+	public static readonly SOUTH_EAST = Object.freeze(new Direction(1, 1));
+
+	public static readonly SOUTH_WEST = Object.freeze(new Direction(-1, 1));
 
 	public static readonly WEST = Object.freeze(new Direction(-1, 0));
 

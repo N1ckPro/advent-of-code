@@ -6,7 +6,7 @@ const input = await readInput(3, '2024');
 const part1TestsInput = `xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))`.split(/\n/g);
 const part2TestsInput = `xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))`.split(/\n/g);
 
-describe('Reports should be checked correctly', () => {
+describe('Instructions should be parsed correctly', () => {
 	// Part 1
 	test('Provided input should give 161', () => {
 		expect(solution1(part1TestsInput)).toBe(161);
