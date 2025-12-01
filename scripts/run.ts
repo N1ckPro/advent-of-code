@@ -13,7 +13,7 @@ const { day, year } = options;
 
 if (typeof day === 'undefined') throw new Error('Day argument is required!');
 
-const basePath = join('src', 'solutions', year ?? '2024', day >= 10 ? day.toString() : `0${day}`);
+const basePath = join('src', 'solutions', year ?? '2025', day >= 10 ? day.toString() : `0${day}`);
 if (!existsSync(basePath)) throw new Error(`Invalid path ${basePath}`);
 if (!existsSync(join(basePath, 'part1.ts'))) throw new Error(`Provided directory contains no solutions!`);
 
