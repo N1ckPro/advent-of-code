@@ -17,7 +17,7 @@ const basePath = join('src', 'solutions', year ?? '2025', day >= 10 ? day.toStri
 if (!existsSync(basePath)) throw new Error(`Invalid path ${basePath}`);
 if (!existsSync(join(basePath, 'part1.ts'))) throw new Error(`Provided directory contains no solutions!`);
 
-console.log(`Running solutions for Day ${day} (${year ?? '2024'})`);
+console.log(`Running solutions for Day ${day} (${year ?? '2025'})`);
 await import(pathToFileURL(join(basePath, 'part1.ts')).href);
 if (!existsSync(join(basePath, 'part2.ts'))) process.exit();
 await import(pathToFileURL(join(basePath, 'part2.ts')).href);
