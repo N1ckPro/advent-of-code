@@ -16,7 +16,7 @@ export const getNumber = (line: string) => {
 	let last;
 	for (const [, rawMatch] of line.matchAll(regex)) {
 		const match = /\d/.test(rawMatch) ? rawMatch : Numbers[rawMatch as keyof typeof Numbers];
-		if (!first) first = match;
+		first ??= match;
 		last = match;
 	}
 
